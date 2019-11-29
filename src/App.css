@@ -1,0 +1,14 @@
+:root{
+  --blue: rgb( 73, 118, 181);
+  --white: whitesmoke;
+  --black: black;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: var(--blue);
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}

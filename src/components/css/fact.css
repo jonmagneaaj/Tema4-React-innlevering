@@ -1,0 +1,76 @@
+.fact{
+    display: grid;
+    justify-content: center;
+
+    max-width: 300rem;
+
+    color: var(--white)
+}
+
+/*Title*/
+.fact h1{
+    font-size: 5rem;
+}
+
+/*New fact Button */
+.fact button{
+    width: 30rem;
+    height: 10rem;
+
+    background-color: var(--blue);
+
+    color: var(--white);
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 700;
+
+    border: white 3px solid;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/*The wrapper around the image and text*/
+.fact-wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90rem, 1fr));
+    gap: 3rem;
+}
+
+/*IMG container*/
+.fact-img{
+    width: 40rem;
+    height: 60rem;
+    overflow: hidden;
+    object-position: 50% 50%;
+}
+
+/*The main image to facts*/
+.fact-img img{
+    object-fit: cover;
+    object-position: 50% 0;
+    height: 100%;
+}
+/*Wrapper around text elements*/
+.fact-text-wrap{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    max-height: 70rem;
+
+    border-left: 3px solid var(--white);
+}
+
+/*Fact text*/
+.fact-text{
+    max-width: 50rem;
+    text-align: center;
+
+    font-size: 3rem;
+    padding-left: 2rem;
+}
+/*fact number*/
+.fact-nbr{
+    font-size: 3rem;
+    text-align: center;
+}
