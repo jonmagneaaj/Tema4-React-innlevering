@@ -1,35 +1,52 @@
 import React,{useState} from 'react'
-import FactsArray from '../arrays/FactsArray'
+import { FaRegHeart } from 'react-icons/fa'
+
+
 import '../css/fact.css'
+import '../css/size/phone.css'
 
 
-const Facts = () =>{
-    const [facts, setFacts] = useState(FactsArray.Facts)
-    const [rand, setRand] = useState(Math.floor(Math.random() * facts.length))
+
+const Fact = (props) =>{
+
+    // --- Favourite ---
+    
+    // --- Favourite  END ---
+
+
+
+    // --- RandomGEN ---
+    const [rand, setRand] = useState(Math.floor(Math.random() * props.cat.length))
 
     const updateRandom = () => {
-        setRand(Math.floor(Math.random() * facts.length))
+        let newRandom = Math.floor(Math.random() * props.cat.length) 
+        if(newRandom !== rand){
+            setRand(newRandom)
+        }else{
+            return updateRandom()
+        }
     }
-
+    // --- END ---
     return(
     <div className='fact'>
-        <h1>Random {facts[rand].type} Fact!</h1>
+        <h1>Random {props.cat.length > 0 ? props.cat[rand].type : ''} Fact!</h1>
         <div className='fact-wrap'>
             <div className='fact-img'>
-                <img src={facts[rand].url} alt={'This is image of' + facts[rand].name} />
+                <img src={props.cat.length > 0 ? props.cat[rand].url : ''} alt={'This is image of' + props.cat.length > 0 ? props.cat[rand].name : ''} />
             </div>
             <div className='fact-text-wrap'>
                 <div className="fact-text">
-                    <h2>{facts[rand].property}</h2>
+                    <h2>{props.cat.length > 0 ? props.cat[rand].property : ''}</h2>
                 </div>
                 <div className='fact-nbr'>
-                    <h3>#{rand+1}</h3>
+                    <h3>#{props.cat.length > 0 ? props.cat[rand].nbr : ''}</h3>
+                    <a onClick={() => props.addFav(props.cat[rand])}> <FaRegHeart /> </a>
                     <button onClick={updateRandom} >New Fact!</button>
                 </div>
             </div>
         </div>
     </div>
-    )      
+    )
 }
 
-export default Facts
+export default Fact

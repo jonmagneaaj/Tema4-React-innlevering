@@ -1,0 +1,11 @@
+@media only screen and (max-width: 992px) {
+    .fact-img{
+        width: 100%;
+        height: 30rem;
+  }
+
+  .fact-text-wrap{
+      border-left: none;
+  }
+
+}

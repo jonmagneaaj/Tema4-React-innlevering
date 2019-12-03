@@ -1,15 +1,29 @@
 .fact{
-    display: grid;
-    justify-content: center;
-
-    max-width: 300rem;
-
-    color: var(--white)
+    max-width: 200rem;
+    
+    color: var(--white);
 }
+/*Categories overview*/
+.categories{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 
+    height: 5rem;
+}
+.categories h2{
+    color: var(--white);
+}
+.categories h2:hover{
+    cursor: pointer;
+    font-size: x-large;
+}
 /*Title*/
 .fact h1{
     font-size: 5rem;
+    text-align: center;
 }
 
 /*New fact Button */
@@ -25,14 +39,21 @@
     font-weight: 700;
 
     border: white 3px solid;
+    border-radius: 2.5rem;
     text-decoration: none;
     display: inline-block;
+}
+.fact button:hover{
+    background-color: white;
+    color: var(--blue);
+    cursor: pointer;
 }
 
 /*The wrapper around the image and text*/
 .fact-wrap{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
     gap: 3rem;
 }
 
@@ -41,13 +62,14 @@
     width: 40rem;
     height: 60rem;
     overflow: hidden;
-    object-position: 50% 50%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
 }
 
 /*The main image to facts*/
 .fact-img img{
     object-fit: cover;
-    object-position: 50% 0;
     height: 100%;
 }
 /*Wrapper around text elements*/
@@ -58,6 +80,7 @@
     max-width: 50rem;
     max-height: 70rem;
 
+    padding-left: 2rem;
     border-left: 3px solid var(--white);
 }
 
@@ -66,11 +89,29 @@
     max-width: 50rem;
     text-align: center;
 
-    font-size: 3rem;
+    font-size: 2rem;
     padding-left: 2rem;
 }
 /*fact number*/
 .fact-nbr{
+    display: grid;
+    justify-content: center;
+
     font-size: 3rem;
     text-align: center;
+}
+
+h2{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+/*Favourite button*/
+
+.fact-nbr a{
+    font-size: 5rem;
+}
+.fact-nbr a:hover{
+    font-size: 6rem;
+    cursor: pointer;
 }

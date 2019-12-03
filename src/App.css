@@ -12,3 +12,31 @@ body{
   height: 100vh;
   font-family: 'Quicksand', sans-serif;
 }
+
+.site-wrap{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  height: 5rem;
+}
+
+.top-nav a{
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.top-nav a:hover{
+  font-size: xx-large;
+  font-weight: 800;
+}
