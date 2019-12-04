@@ -10,7 +10,6 @@ const App = () =>{
   const [fav,setFav] = useState([])
 
   const addFav = (n) => {
-    console.log('here i am', n)
     setFav([...fav, n])
   }
   

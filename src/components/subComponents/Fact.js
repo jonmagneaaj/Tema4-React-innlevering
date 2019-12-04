@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { FaRegHeart } from 'react-icons/fa'
+import React,{useState, useEffect} from 'react'
+import { FaRegHeart, FaHeart } from 'react-icons/fa'
 
 
 import '../css/fact.css'
@@ -9,11 +9,17 @@ import '../css/size/phone.css'
 
 const Fact = (props) =>{
 
-    // --- Favourite ---
-    
-    // --- Favourite  END ---
+    const [checked, setChecked] = useState(false)
 
-
+    const addMe = () => {
+        console.log('add me')
+        setChecked(true)
+        props.addFav(props.cat[rand])
+    }
+    const deleteMe = () => {
+        setChecked(false)
+        //to be done
+    }
 
     // --- RandomGEN ---
     const [rand, setRand] = useState(Math.floor(Math.random() * props.cat.length))
@@ -27,6 +33,20 @@ const Fact = (props) =>{
         }
     }
     // --- END ---
+
+    //---wrapper function ---
+    
+    const wrap = () =>{
+        setChecked(false)
+        updateRandom()
+    }
+
+    useEffect( () => {
+        console.log('use effect')
+        updateRandom()
+    }, [] )
+
+
     return(
     <div className='fact'>
         <h1>Random {props.cat.length > 0 ? props.cat[rand].type : ''} Fact!</h1>
@@ -39,9 +59,15 @@ const Fact = (props) =>{
                     <h2>{props.cat.length > 0 ? props.cat[rand].property : ''}</h2>
                 </div>
                 <div className='fact-nbr'>
-                    <h3>#{props.cat.length > 0 ? props.cat[rand].nbr : ''}</h3>
-                    <a onClick={() => props.addFav(props.cat[rand])}> <FaRegHeart /> </a>
-                    <button onClick={updateRandom} >New Fact!</button>
+    <h3>#{rand} av {props.cat.length}</h3>
+                    {
+                        checked ? 
+                        <FaHeart onClick={deleteMe} />
+                        :
+                        <FaRegHeart onClick={() => addMe() } />
+                    }
+
+                    <button onClick={wrap} >New Fact!</button>
                 </div>
             </div>
         </div>

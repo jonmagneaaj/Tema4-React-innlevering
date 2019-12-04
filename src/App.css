@@ -4,6 +4,10 @@
   --black: black;
 }
 
+*{
+  margin:
+}
+
 html{
   font-size: 62.5%;
 }
@@ -14,9 +18,8 @@ body{
 }
 
 .site-wrap{
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .top-nav {

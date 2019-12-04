@@ -31,7 +31,7 @@ const Showcase = (props) =>{
                 <h2  id='cat-food' onClick={Food}>Food facts</h2>
                 <h2  id='cat-random' onClick={All}>Random</h2>
             </div>
-            <Fact addFav={props.addFav} cat={cat}/>
+            <Fact updaterandom={props.updaterandom} addFav={props.addFav} cat={cat}/>
         </div>
     )
 }
