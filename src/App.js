@@ -13,9 +13,7 @@ const App = () =>{
     setFav([...fav, n])
   }
   const removeFav = (n) =>{
-    let copy =[...fav]
-    copy.splice(n,1)
-    setFav(copy)
+    setFavs(fav => fav != favs[n])
   }
 
 
