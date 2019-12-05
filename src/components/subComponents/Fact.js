@@ -8,7 +8,7 @@ import '../css/size/phone.css'
 
 
 const Fact = (props) =>{
-
+    //--- Add to fav---
     const [checked, setChecked] = useState(false)
 
     const addMe = () => {
@@ -18,8 +18,9 @@ const Fact = (props) =>{
     }
     const deleteMe = () => {
         setChecked(false)
-        //to be done
+        props.removeFav()
     }
+    //---END----
 
     // --- RandomGEN ---
     const [rand, setRand] = useState(Math.floor(Math.random() * props.cat.length))
@@ -45,7 +46,7 @@ const Fact = (props) =>{
         console.log('use effect')
         updateRandom()
     }, [] )
-
+    //---END---
 
     return(
     <div className='fact'>
@@ -59,12 +60,12 @@ const Fact = (props) =>{
                     <h2>{props.cat.length > 0 ? props.cat[rand].property : ''}</h2>
                 </div>
                 <div className='fact-nbr'>
-    <h3>#{rand} av {props.cat.length}</h3>
+                <h3>#{rand+1}</h3>
                     {
                         checked ? 
-                        <FaHeart onClick={deleteMe} />
+                       <div className='fact-heart'> <FaHeart onClick={deleteMe} /></div>
                         :
-                        <FaRegHeart onClick={() => addMe() } />
+                        <div className='fact-heart'><FaRegHeart onClick={() => addMe() } /></div>
                     }
 
                     <button onClick={wrap} >New Fact!</button>

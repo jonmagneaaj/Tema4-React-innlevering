@@ -12,17 +12,22 @@ const App = () =>{
   const addFav = (n) => {
     setFav([...fav, n])
   }
-  
+  const removeFav = (n) =>{
+    let copy =[...fav]
+    copy.splice(n,1)
+    setFav(copy)
+  }
+
 
   return(
-    <div class='site-wrap'>
+    <div className='site-wrap'>
       <nav className='top-nav'>
         <Link to='/'>Facts</Link>
         <Link to='fav'>Favourites</Link>
       </nav>
       <Router >
-        <Facts addFav={addFav} path='/'/>
-        <Favourites  fav={fav} path='fav' />
+        <Facts removeFav={removeFav} addFav={addFav} path='/'/>
+        <Favourites fav={fav} removeFav={removeFav} path='fav' />
       </Router>
     </div>
   )

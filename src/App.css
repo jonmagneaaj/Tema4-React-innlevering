@@ -4,10 +4,6 @@
   --black: black;
 }
 
-*{
-  margin:
-}
-
 html{
   font-size: 62.5%;
 }
@@ -35,11 +31,10 @@ body{
 .top-nav a{
   color: var(--white);
   text-decoration: none;
-  padding: 1rem 2rem;
+  
   font-size: 3rem;
   font-weight: 600;
 }
 .top-nav a:hover{
-  font-size: xx-large;
-  font-weight: 800;
+  border-bottom: 2px solid white;;
 }
