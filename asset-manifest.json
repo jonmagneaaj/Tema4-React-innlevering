@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Tema4-React-innlevering/static/css/main.3f91bc24.chunk.css",
-    "main.js": "/Tema4-React-innlevering/static/js/main.03d4eaca.chunk.js",
-    "main.js.map": "/Tema4-React-innlevering/static/js/main.03d4eaca.chunk.js.map",
+    "main.js": "/Tema4-React-innlevering/static/js/main.ffcd7c7c.chunk.js",
+    "main.js.map": "/Tema4-React-innlevering/static/js/main.ffcd7c7c.chunk.js.map",
     "runtime-main.js": "/Tema4-React-innlevering/static/js/runtime-main.4a329db3.js",
     "runtime-main.js.map": "/Tema4-React-innlevering/static/js/runtime-main.4a329db3.js.map",
     "static/js/2.ca9f6184.chunk.js": "/Tema4-React-innlevering/static/js/2.ca9f6184.chunk.js",
     "static/js/2.ca9f6184.chunk.js.map": "/Tema4-React-innlevering/static/js/2.ca9f6184.chunk.js.map",
     "index.html": "/Tema4-React-innlevering/index.html",
-    "precache-manifest.315977da6fc5ca28fd34905148e2be6e.js": "/Tema4-React-innlevering/precache-manifest.315977da6fc5ca28fd34905148e2be6e.js",
+    "precache-manifest.c032c0599ab2b626211f38b28db0db2d.js": "/Tema4-React-innlevering/precache-manifest.c032c0599ab2b626211f38b28db0db2d.js",
     "service-worker.js": "/Tema4-React-innlevering/service-worker.js",
     "static/css/main.3f91bc24.chunk.css.map": "/Tema4-React-innlevering/static/css/main.3f91bc24.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.4a329db3.js",
     "static/js/2.ca9f6184.chunk.js",
     "static/css/main.3f91bc24.chunk.css",
-    "static/js/main.03d4eaca.chunk.js"
+    "static/js/main.ffcd7c7c.chunk.js"
   ]
 }

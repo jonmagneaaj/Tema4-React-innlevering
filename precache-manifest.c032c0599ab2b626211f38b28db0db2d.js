@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a00464ba14fe1785be1b841761ca67c2",
+    "revision": "44345b2bf50533ee2ae5ceba782dd572",
     "url": "/Tema4-React-innlevering/index.html"
   },
   {
-    "revision": "609ca936e1700952880c",
+    "revision": "d5b4493c71633f367a08",
     "url": "/Tema4-React-innlevering/static/css/main.3f91bc24.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Tema4-React-innlevering/static/js/2.ca9f6184.chunk.js"
   },
   {
-    "revision": "609ca936e1700952880c",
-    "url": "/Tema4-React-innlevering/static/js/main.03d4eaca.chunk.js"
+    "revision": "d5b4493c71633f367a08",
+    "url": "/Tema4-React-innlevering/static/js/main.ffcd7c7c.chunk.js"
   },
   {
     "revision": "b3e8e336271b7eced4ce",
